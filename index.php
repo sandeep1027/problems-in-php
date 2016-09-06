@@ -20,8 +20,18 @@ class PhpProblem{
     *@var int
     */
     private $strlen;
+    /*
+    *@access private
+    *@var string
+    */
     private $temp; 
-  
+    
+   /*
+   * Logic function
+   *@param var $str(String)  var $klen(int)
+   *@return var integer
+   */
+   
     public function Logic($str,$klen){
         $strlen=strlen($str);    
         for($i=0;$i<=$strlen;$i++ ) {
