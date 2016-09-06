@@ -7,9 +7,7 @@
 * @class PhpProblem
 */
 
-
 class PhpProblem{
-   
    /*
    *@access private
    *@var int
@@ -22,6 +20,7 @@ class PhpProblem{
     */
    
     public function Logic($str,$klen){
+		$this->counts="";
         $strlen=strlen($str);    
         for($i=0;$i<=$strlen;$i++ ) {
             $temp="";
@@ -37,12 +36,35 @@ class PhpProblem{
                }
            }
         }
-     return $this->counts;
+		if($this->counts!=null)
+				return $this->counts;
+		else
+				return 0;
    }
 }
+ /* class object */
+ $classobj=new PhpProblem();
+ 
+ /* 
+ * Reading Sample test cases
+ * 2
+ * galaxy 1
+ * aaa 2
+ * @var filename 
+ */
+ 
+ $filename="test_case.txt";
+ $file=@fopen($filename, "r");
+ if ($file) {
+   $input_array = explode("\n", fread($file, filesize($filename)));
+ }
+ fclose($file);
 
-$classobj=new PhpProblem();
-$result=$classobj->Logic("aabbccc",2);
-echo $result;
+ for($i=1;$i<=$input_array[0];$i++){
+	 $result="";
+	 $input_data=explode(" ",$input_array[$i]);	
+	 $result=$classobj->Logic($input_data[0],$input_data[1]);
+     echo $result."\n";
+ }
 
 ?>
