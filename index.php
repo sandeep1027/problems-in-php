@@ -4,7 +4,6 @@
 *the number of substrings in S of length K which
 *is the palindrome.
 *
-*
 * @class PhpProblem
 */
 
@@ -14,7 +13,7 @@ class PhpProblem{
    *@access private
    *@var int
    */
-    private $count="";
+    public $count="";
     /*
     *@access private
     *@var int
@@ -30,19 +29,21 @@ class PhpProblem{
    * Logic function
    *@param var $str(String)  var $klen(int)
    *@return var integer
-   */
+    */
    
     public function Logic($str,$klen){
         $strlen=strlen($str);    
         for($i=0;$i<=$strlen;$i++ ) {
             $temp="";
             for($j=$i;$j<$i+$klen;$j++){
-                $temp.= $str[$j]; 
+                if(isset($str[$j])){
+                    $temp.= $str[$j];
+                } 
             }
-  
+          
            if(strlen($temp)==$klen){
                if($temp==strrev($temp)){
-                  $count++;
+                     $count++;
                }
            }
         }
