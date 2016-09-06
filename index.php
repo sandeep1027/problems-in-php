@@ -9,26 +9,16 @@
 
 
 class PhpProblem{
+   
    /*
    *@access private
    *@var int
    */
-    public $count="";
+   private $counts="";
     /*
-    *@access private
-    *@var int
-    */
-    private $strlen;
-    /*
-    *@access private
-    *@var string
-    */
-    private $temp; 
-    
-   /*
-   * Logic function
-   *@param var $str(String)  var $klen(int)
-   *@return var integer
+    * Logic function
+    *@param var $str(String)  var $klen(int)
+    *@return var integer
     */
    
     public function Logic($str,$klen){
@@ -43,16 +33,16 @@ class PhpProblem{
           
            if(strlen($temp)==$klen){
                if($temp==strrev($temp)){
-                     $count++;
+                     $this->counts++;
                }
            }
         }
-     return $count;
+     return $this->counts;
    }
 }
 
 $classobj=new PhpProblem();
-$result=$classobj->Logic("aabbcc",2);
+$result=$classobj->Logic("aabbccc",2);
 echo $result;
 
 ?>
