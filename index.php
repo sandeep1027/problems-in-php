@@ -66,5 +66,4 @@ class PhpProblem{
      $result=$classobj->Logic($input_data[0],$input_data[1]);
      echo $result."\n";
  }
-//this is stagging upladte pls test uit
 ?>
