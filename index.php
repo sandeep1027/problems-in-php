@@ -1,26 +1,26 @@
 <?php
 /* 
-*You are given a string S and you need to tell
-*the number of substrings in S of length K which
-*is the palindrome.
-*
-* @class PhpProblem
+ * You are given a string S and you need to tell
+ * the number of substrings in S of length K which
+ * is the palindrome.
+ *
+ * @class PhpProblem
 */
 
 class PhpProblem{
    /*
-   *@access private
-   *@var int
+    * @access private
+    * @var int
    */
    private $counts="";
     /*
-    * Logic function
-    *@param var $str(String)  var $klen(int)
-    *@return var integer
+     * Logic function
+     * @param var $str
+     * @return var integer
     */
    
     public function Logic($str,$klen){
-		$this->counts="";
+	$this->counts="";
         $strlen=strlen($str);    
         for($i=0;$i<=$strlen;$i++ ) {
             $temp="";
@@ -37,20 +37,20 @@ class PhpProblem{
            }
         }
 		if($this->counts!=null)
-				return $this->counts;
+		   return $this->counts;
 		else
-				return 0;
+	           return 0;
    }
 }
  /* class object */
  $classobj=new PhpProblem();
  
  /* 
- * Reading Sample test cases
- * 2
- * galaxy 1
- * aaa 2
- * @var filename 
+  * Reading Sample test cases
+  * 2
+  * galaxy 1
+  * aaa 2
+  * @var filename 
  */
  
  $filename="test_case.txt";
@@ -61,10 +61,10 @@ class PhpProblem{
  fclose($file);
 
  for($i=1;$i<=$input_array[0];$i++){
-	 $result="";
-	 $input_data=explode(" ",$input_array[$i]);	
-	 $result=$classobj->Logic($input_data[0],$input_data[1]);
+     $result="";
+     $input_data=explode(" ",$input_array[$i]);	
+     $result=$classobj->Logic($input_data[0],$input_data[1]);
      echo $result."\n";
  }
-
+//this is stagging upladte pls test uit
 ?>
