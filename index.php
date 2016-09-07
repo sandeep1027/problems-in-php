@@ -1,16 +1,16 @@
 <?php
 /* 
- *You are given a string S and you need to tell
- *the number of substrings in S of length K which
- *is the palindrome.
+ * You are given a string S and you need to tell
+ * the number of substrings in S of length K which
+ * is the palindrome.
  *
  * @class PhpProblem
 */
 
 class PhpProblem{
    /*
-    *@access private
-    *@var int
+    * @access private
+    * @var int
    */
    private $counts="";
     /*
